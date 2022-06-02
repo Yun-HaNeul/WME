@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+/* Font */
+@font-face {
+    font-family: "Montserrat_R";
+    src: url(../assets/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat_M";
+    src: url(../assets/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: "Montserrat_SB";
+    src: url(../assets/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Montserrat_B";
+    src: url(../assets/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: "Montserrat_BB";
+    src: url(../assets/Montserrat-Black.ttf);
+}
+
+/* Common */
+:root {
+    --main-txt: white;
+    --main-color: #0A2339;
+    --sub-color: #EAF4F6;
+}
+html, body {
+    font-family: "Montserrat_R";
+    font-size: 10px;
+    overflow-x: hidden;
+    word-break: keep-all;
+}
+
+/* header */
+.header {
+    height: 12rem;
+    padding: 5rem;
+}
+.header .logo a {
+    width: 27rem;
+    height: 8.5rem;
+}
+/* nav */
+.nav {
+    width: 11rem;
+}
+.nav .nav_list {
+    gap: 2rem;
+}
+.nav .nav_list li a {
+    font-size: 1.5rem;
+}
+
+/* main */
+    /* sec1 */
+
+.sec1 .secInner .sloganWrap .slogan {
+    font-size: 5vw;
+}
+.sec1 .secInner .sloganWrap .slogan strong {
+    font-size: 10vw;
+}
+.sec1 .secInner .sloganWrap .slogan::before {
+    transform: translateX(-50%) translateY(100px) scale(.7);
+}
+.sec1 .mainBox .partnerBox .partner_txt img {
+    width: 85vw;
+}
+ /* sec2 */
+.sec2 .secInner .intro_t .intro_t_txt {
+    font-size: 2rem;
+}
+.sec2 .secInner .intro_b .intro_b_tit {
+    font-size: 3.5vw;
+    margin: 15vw;
+}
+.sec2 .secInner .intro_b .intro_b_cont {
+    flex-direction: column;
+    gap: 15vw;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox {
+    gap: 8vw; 
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list {
+    width: 18.5rem;
+    height: 18.5rem;
+
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_txtBox {
+    justify-content: center;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_txtBox p {
+    width: 74%;
+    text-align: center;
+    margin-right: 0;
+    font-size: 2.5rem;
+}
+
+/* sec3 */
+.sec3 .secInner .pro_cont .catalogBox .catal_frt {
+    width: 25rem;
+    height: 36rem;
+}
+.sec3 .secInner .pro_cont .catalogBox .catal_frt::before {
+    font-size: 6rem;
+}
+.sec3 .secInner .pro_cont::after {
+    height: 29rem;
+}
+.sec3 .secInner .pro_cont::before {
+    /* width: 38rem;
+    height: 38rem; */
+    top: -30%;
+}
+
+/* footer */
+
+/* animation */
+@keyframes logoRoll {
+    to {opacity: .7; transform: translateX(-50%) translateY(0) scale(.5);}
+}

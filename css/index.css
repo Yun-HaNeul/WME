@@ -1,0 +1,618 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+/* Font */
+@font-face {
+    font-family: "Montserrat_R";
+    src: url(../assets/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat_M";
+    src: url(../assets/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: "Montserrat_SB";
+    src: url(../assets/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Montserrat_B";
+    src: url(../assets/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: "Montserrat_BB";
+    src: url(../assets/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family: "RaleWay_R";
+    src: url(../assets/Raleway-Medium.ttf);
+}
+
+/* Common */
+:root {
+    --main-txt: white;
+    --main-color: #0A2339;
+    --sub-color: #EAF4F6;
+}
+html, body {
+    font-family: "Montserrat_R";
+    font-size: 10px;
+    overflow-x: hidden;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.secInner {
+    max-width: 1680px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* .container {
+
+} */
+/* header */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 15rem;
+    padding: 1rem 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+.header .logo a {
+    width: 36rem;
+    height: 11.4rem;
+    text-indent: -9999rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/logo/logo_w.svg");
+    transition: 0.35s;
+}
+.header .f_menu {
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.header .f_menu span {
+    display: block;
+    width: 4.7rem;
+    height: .3rem;
+    background: var(--sub-color);
+    border-radius: 10rem;
+}
+/* active */
+.header.active .logo a {
+    background-image: url("../img/logo/logo_c.svg");
+}
+.header.active .f_menu span {
+    background: var(--main-color);
+}
+
+/* Belt_menu */
+.belt_menu {
+    position: fixed;
+    left: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    transform: translateY(-50%);
+    background: rgba(234, 244, 246, 0.336);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    border: 1px solid red;
+    transition: 1s ease-in;
+    opacity: 0;
+}
+.belt_menu .menu_List {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1680px;
+    width: 100%;
+    margin: 0 auto;
+}
+.belt_menu .menu_List li a {
+    position: relative;
+    font: 10rem "Montserrat_B";
+    color: var(--sub-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+    transition: 0.35s;
+}
+.belt_menu .menu_List li a:hover {
+    transform: translateX(15%);
+}
+.belt_menu .menu_List li a::before {
+    content: '';
+    position: absolute;
+    left: -5.5%;
+    top: 50%;
+    width: 0;
+    height: 2.5rem;
+    background: rgba(255,255,255,.6);
+    transform: translateY(-50%);
+    transition: 0.35s ease-in;
+}
+/* active */
+.belt_menu .menu_List li.active a::before {
+    width: 110%;
+}
+.belt_menu.active {
+    left: 0;
+    opacity: 1;
+} 
+/* nav */
+.nav {
+    position: fixed;
+    bottom: 6rem;
+    z-index: 9999;
+    width: 14rem;
+}
+.nav .nav_list {   
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.nav .nav_list li a{
+    position: relative;
+    color: var(--main-txt);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    transition: 0.35s;
+}
+.nav .nav_list li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    transition: 0.5s ease-in;
+}
+.nav .nav_list li a:hover {
+    opacity: 0.5;
+}
+.nav .nav_list li.active a::before {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+/* active */
+.nav.active .nav_list li a {
+    color: var(--main-color);
+}
+.nav.active .nav_list li.active a::before {
+    width: 100%;
+    background: rgba(10, 35, 57, 0.3);
+}
+
+/* main */
+
+
+    /* sec1 */
+.sec1 {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: url("../img/bg/main_02.png") no-repeat center bottom / cover;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    z-index: 1;
+    animation: bgColor 1.5s 10s linear forwards;
+}
+.sec1 .secInner .sloganWrap {
+    /* overflow-x: hidden; */
+    overflow-y: hidden;
+}
+.sec1 .secInner .sloganWrap:nth-child(2) .slogan {
+    animation-delay: 1s, 7s;
+}
+.sec1 .secInner .sloganWrap:nth-child(3) .slogan {
+    animation-delay: 1.5s, 7.5s;
+}
+.sec1 .secInner .sloganWrap .slogan {
+    position: relative;
+    font: 8rem "Montserrat_SB";
+    color: rgb(238, 238, 238);
+    line-height: 3;
+    text-align: center;
+    letter-spacing: 0.55rem;
+    transform: translateY(300px);
+    animation: 
+    rolling 2s linear forwards,
+    smoke 3s 6.5s linear forwards;
+}
+
+.sec1 .secInner .sloganWrap .slogan strong {
+    font: 13rem "Montserrat_BB";
+    color: var(--main-txt);
+    z-index: 1;
+}
+.sec1 .secInner .sloganWrap .slogan::before {
+    position: absolute;
+    left: 22%;
+    bottom: 15%;
+    transform: translateX(-50%) translateY(100px);
+    z-index: -1;
+    opacity: 0;
+    animation: logoRoll 2s 3.2s linear forwards;
+}
+.sec1 .secInner .sloganWrap:nth-child(2) .slogan::before {
+    content: url("../img/logo/logo_wme.svg");
+}
+.sec1 .secInner .sloganWrap:nth-child(3) .slogan::before {
+    left: 50%;
+    content: url("../img/logo/logo_lg.svg");
+}
+.sec1 .mainBox {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 48, 91, 0.6);
+    transition: 0.35s linear;
+    opacity: 0;
+    backdrop-filter: blur(0px);
+}
+.sec1 .mainBox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    animation: partner 3s 1s linear forwards;
+}
+.sec1 .mainBox .partnerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    transform: translateY(5rem);
+}
+.sec1 .mainBox .partnerBox > * {
+    overflow-y: hidden;
+}
+.sec1 .mainBox .partnerBox > * > img {
+    transform: translateY(400px);
+}
+.sec1 .mainBox.active .partnerBox > * > img {
+    animation: rolling 2.5s 3s ease-in forwards;
+}
+.sec1 .mainBox .partnerBox .partner_logo {
+    width: 100%;
+    height: 33rem;
+}
+.sec1 .mainBox .partnerBox .partner_logo img {
+    animation-delay: 5s;
+}
+/* sec2 */
+.sec2 {
+    padding: 23rem 0;
+    background: var(--main-color);
+    color: var(--main-txt);
+}
+.sec2 .secInner .intro_t ul {
+    /* width: 200%; */
+    display: flex;
+    transform: translateX(20%);
+    gap: 16rem;
+}
+
+.sec2 .secInner .intro_t ul > li {
+    flex: 0 0 auto;
+}
+.sec2 .secInner .intro_t ul .loop_txt {
+    font: 25rem "RaleWay_R";
+    color: rgba(49, 73, 95, 0.8);
+
+}
+
+.sec2 .secInner .intro_t .intro_t_txt {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2;
+    margin-top: -10rem;
+    
+}
+.sec2 .secInner .intro_b .intro_b_tit {
+    font: 3.5rem "Montserrat_BB";
+    text-align: center;
+    margin: 15rem 0;
+}
+.sec2 .secInner .intro_b .intro_b_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sec2 .secInner .intro_b .intro_b_cont > div {
+    flex: 1;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10.5rem;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list {
+    width: 21rem;
+    height: 21rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 8px 8px 10px #071827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists:nth-child(2)  {
+    margin-top: 15rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list > div {
+    width: 13.5rem;
+    height: 13.5rem;
+    background-repeat: no-repeat;
+    background-image: url("../img/logo/affili.png");
+    background-size: auto;
+
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list1 > div {
+    background-position: 0 -5%;
+    height: 16rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list2 > div {
+    background-position: 0 31.5%;
+    width: 14rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list3 > div {
+    background-position: 4% 67%;
+    height: 16rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list4 > div {
+    background-position: 0 100%
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list5 > div {
+    background-position: 46% 0%
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list6 > div {
+    background-position: 49% 30%;
+    height: 16rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list7 > div {
+    background-position: 55% 65%;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list8 > div {
+    background-position: 48% 100%;
+    width: 14rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list9 > div {
+    background-position: 94% 0%;
+    width: 14rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list10 > div {
+    background-position: 97% 31%;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list11 > div {
+    background-position: 102% 65%;
+    height: 16rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists .affi_list12 > div {
+    background-position: 99% 102%;
+    width: 15rem;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_txtBox {
+    display: flex;
+    justify-content: flex-end;
+}
+.sec2 .secInner .intro_b .intro_b_cont .affi_txtBox p {
+    font-size: 2.2rem;
+    width: 80%;
+    word-break: keep-all;
+    line-height: 2;
+    margin-right: 6rem;
+}
+/* active */
+.sec2.active  .secInner .intro_t ul{
+    animation: wmeMarquee 45s linear infinite;
+}
+.sec2.active .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists {
+    animation: fadeRol 3s 2s ease-out forwards;
+}
+.sec2.active .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists:nth-child(2) {
+    animation-delay: 2.2s;
+}
+.sec2.active .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists:nth-child(3) {
+    animation-delay: 2.4s;
+}
+
+
+/* section3 */
+.sec3 {
+    height: 100vh;
+    background: var(--sub-color);
+}
+.sec3 .secInner {
+    text-align: center;
+}
+.sec3 .secInner .pro_tit {
+    opacity: 0;
+    transform: translateY(100px);
+}
+.sec3 .secInner .pro_tit .pro_desc {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-top: 2rem;
+}
+.sec3 .secInner .pro_cont {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+}
+.sec3 .secInner .pro_cont::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 49rem;
+    height: 50rem;
+    background: url("../img/bg/sec3_bg.svg") no-repeat center / cover;
+}
+.sec3 .secInner .pro_cont::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 44rem;
+    background: url("../img/sec3_line.png") no-repeat center / cover;
+}
+.sec3 .secInner .pro_cont .catalogBox .catal_frt {
+    position: relative;
+    width: 39.2rem;
+    height: 55.4rem;
+    transform: translateY(50px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(8px 8px 22px rgba(0, 0, 0, 0.151));
+    cursor: pointer;
+    transition: 0.35s;
+}
+.sec3 .secInner .pro_cont .catalogBox .catal_frt:hover {
+    opacity: 0.8;
+}
+.sec3 .secInner .pro_cont .catalogBox .catal_frt::before {
+    position: absolute;
+    font: 10rem "Montserrat_B";
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: rgba(0, 48, 91, 0.3);
+    top: -30%;
+    opacity: 0;
+}
+.sec3 .secInner .pro_cont .catalogBox .catalLamb_frt {
+    background-image: url("../img/bg/sec3_lamb.jpg");
+
+}
+.sec3 .secInner .pro_cont .catalogBox .catalLamb_frt::before {
+    content: "LAMB";
+    left: -30%;
+}
+.sec3 .secInner .pro_cont .catalogBox .catalGoat_frt {
+    background-image: url("../img/bg/sec3_goat.jpg");
+}
+.sec3 .secInner .pro_cont .catalogBox .catalGoat_frt::before {
+    content: "GOAT";
+    right: -30%;
+}
+/* active */
+.sec3.active .secInner .pro_tit {
+    animation: fadeRol 1.5s ease-in forwards;
+}
+.sec3.active .secInner .pro_cont .catalogBox .catal_frt::before {
+    animation: proName 1.5s 1s ease-in-out forwards;
+}
+.sec3.active .secInner .pro_cont .catalogBox .catalGoat_frt::before {
+    animation-delay: 1.3s;
+}
+.sec3.active .secInner .pro_cont .catalogBox .catal_frt {
+    animation: rolling 1.5s linear forwards;
+}
+/* footer */
+footer {
+    height: 12rem;
+    background: var(--sub-color);
+    color: var(--main-color);
+    border-top: 1px solid var(--main-color);
+}
+footer .f_inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .f_inner .f_copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+    border-right: 1px solid var(--main-color);
+
+}
+footer .f_inner .f_top {
+    width: 10%;
+    height: 100%;
+}
+footer .f_inner .f_top .f_topBtn {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+footer .f_inner .f_top .f_topBtn::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.8rem;
+    height: 5rem;
+    background: url("../img/icon/top.svg") no-repeat center / contain;
+}
+/* animation */
+@keyframes rolling {
+    to {transform: translateY(0);}
+}
+@keyframes logoRoll {
+    to {opacity: .7; transform: translateX(-50%) translateY(0);}
+}
+@keyframes smoke {
+    50% {opacity: 1;}
+    100% {opacity: 0; visibility: hidden; filter: blur(20px); transform: translateX(100px) translateY(-250px);}
+}
+@keyframes bgColor {
+    to {filter: grayscale(0%);}
+}
+@keyframes partner {
+    to {opacity: 1; backdrop-filter: blur(5px);}
+}
+@keyframes wmeMarquee {
+    to {transform: translateX(-140%); }
+}
+@keyframes fadeRol {
+    to {opacity: 1; transform: translateY(0);}
+}
+@keyframes proName {
+    to {opacity: 1; top: 0;}
+}
