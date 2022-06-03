@@ -1,19 +1,34 @@
 $(function(){
     // main
     function over(){
-        $(".sloganWrap").css({"overflow-y":"visible"});
+        $(".sec1").addClass("active");
     }
     function main(){
         setTimeout(over,3000);
+    }
+    function flow(){
+        $(".sloganWrap").css({"overflow":"visible"});
+    }
+    function main2(){
+        if($(window).width() < 1200){
+            setTimeout(flow,8000);
+        }else {
+            setTimeout(flow,9000);
+        }
     }
     function partnerFunc(){
         $(".mainBox").addClass("active");
     }
     function partner(){
-        setTimeout(partnerFunc,9000);
+        setTimeout(partnerFunc,15000);
     }
     main();
+    main2();
     partner();
+
+    $(window).resize(function(){
+        main2();
+    })
 
     // menu Scroll
     const menu = $(".nav_list li");
