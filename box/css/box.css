@@ -12,6 +12,12 @@ body {
   perspective: 100vmin;
   overflow: hidden;
 }
+
+/* Font */
+@font-face {
+  font-family: "noto";
+  src: url(../../assets/NotoSansKR-Bold.otf);
+}
 :root {
   --packaged: 0;
   --steps: 23;
@@ -622,4 +628,21 @@ input {
 }
 @keyframes ani {
   to {opacity: 1; transform: translateY(0);}
+}
+.click {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  transition-delay: 3s;
+}
+.click p {
+  font: 2rem "noto";
+  animation: heartBeat;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  color: #0A2339;
+}
+#package:checked ~ .click {
+  transition-delay: 3s;
+  opacity: 0;
 }
