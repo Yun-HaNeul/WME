@@ -188,7 +188,7 @@ html, body {
 }
  /* sec2 */
 .sec2 .secInner .intro_t .intro_t_txt {
-    font-size: 2rem;
+    font-size: 2.5vw;
 }
 .sec2 .secInner .intro_b .intro_b_tit {
     font-size: 3.5vw;
@@ -219,9 +219,19 @@ html, body {
     width: 74%;
     text-align: center;
     margin-right: 0;
-    font-size: 2.5rem;
+    font-size: 2vw;
 }
-
+.sec2 .secInner .boxArea .box_cont {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+.sec2 .secInner .boxArea .box_cont p {
+    text-align: center;
+    font-size: 2.5vw;
+}
+.sec2 .secInner .boxArea .box_cont figure img {
+    width: 65vw;
+}
 /* sec3 */
 .sec3 .secInner .pro_cont .catalogBox .catal_frt {
     width: 30vw;

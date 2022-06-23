@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WME x Lambgoat</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" media="(min-width: 600px) and (max-width: 1200px)" href="css/index_T.css">
 </head>
@@ -104,7 +105,8 @@
                     </div>
                     <h3 class="intro_t_tit">WME?</h3>
                     <p class="intro_t_txt">
-                        1996년 설립된 호주 최초의 단독 염소 가공 브랜드, <br />
+                        Western Meat Exporter사는 1996년에 설립되어 <br />
+                        양고기 및 염소고기만을 전문적으로 생산하는 회사로서, <br />
                         호주 업체 중에서도 까다로운 인증들을 다수 보유해 <br />
                         전세계 21개국에 수출하고 있는 염소와 양 전문 브랜드입니다. 
                     </p>
@@ -158,13 +160,37 @@
                         </div>
                         <div class="affi_txtBox">
                             <p>
-                                WME는 위 인증업체들에 소속되어 있으며
-                                세계적으로 인정받은 할랄 인증 뿐만 아니라,
-                                동물을 안전하고 인도적이며  효율적으로
-                                운송 및 조달할 수 있는 시스템을 구축했습니다. <br />
-                                WME는 최고의 품질을 제공합니다.
+                                WME는 업체 중 최초로 염소 제품만을 생산·가공하는
+                                생산시설을 보유하고 있으며 더욱 높은 품질의 제품을
+                                생산하기 위하여 까다롭기로 유명한 호주의 <strong>HACCP인증</strong>에 
+                                따른 자체 가공라인에서 제품을 생산하고 있습니다.
+                                나아가 Charleville에 자체 물류시스템을 구축함으로 
+                                이동과정에서의 스트레스를 최소화하여 
+                                <strong>동물복지인증</strong>을 획득하였습니다. 
                             </p>
                         </div>
+                    </div>
+                </article>
+                <article class="boxArea">
+                    <div class="box_cont">
+                        <p data-aos="fade-up">
+                            최근, 자동화 생산시설 증설을 통하여 기존 비규격화 제품(CSS)에서 <br />
+                            야기되는 위생, 물류, 보관 등의 단점을 보완하는 <br />
+                            <strong>최초의 규격제품(Assorted cuts)</strong>을 출시하였습니다.
+                        </p>
+                        <figure data-aos="fade-left" data-aos-delay="300">
+                            <img src="img/sec2_box.png" alt="assorted cuts">
+                            <figcaption>Western 로고가 박혀있는 하얀 박스 </figcaption>
+                        </figure>
+                    </div>
+                </article>
+                <article class="wmeArea">
+                    <div class="wme_cont">
+                        <p data-aos="fade-up" data-aos-duration="500">
+                            이러한 WME 현재 한국, 미국 및 캐나다 등을 비롯한 <br />
+                            세계 염소 수출시장의 물량 대부분을 공급하고 있는  <br />
+                            <strong>세계적 염소 수출기업</strong>입니다
+                        </p>
                     </div>
                 </article>
             </div>
@@ -178,6 +204,13 @@
                 <div class="pro_cont">
                     <div class="pro_Lamb catalogBox" onclick="window.open('catal/lamb/lamb.html')">
                         <div class="catalLamb_frt catal_frt"></div>
+                    </div>
+                    <div class="pro_new">
+                        <div class="proBox">
+                            <h4>New <br /> PRODUCT</h4>
+                            <div class="box_ele"></div>
+                            <span>WME's Assorted cuts</span>
+                        </div>
                     </div>
                     <div class="pro_Goat catalogBox">
                         <div class="catalGoat_frt catal_frt" onclick="window.open('catal/goat.html')"></div>
@@ -199,6 +232,10 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
