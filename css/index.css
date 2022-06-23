@@ -714,6 +714,7 @@ body::-webkit-scrollbar {
     background: url("../img/sec3_box.png") no-repeat center / cover;
     transform: rotate(5deg);
     animation: shake 1s infinite both;
+    cursor: pointer;
 }
 @keyframes shake {
     50% {transform: rotate(-25deg);}
