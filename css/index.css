@@ -68,8 +68,8 @@ body::-webkit-scrollbar {
     z-index: 999;
 }
 .header .logo a {
-    width: 36rem;
-    height: 11.4rem;
+    width: 20rem;
+    height: 12.5rem;
     text-indent: -9999rem;
     background-size: cover;
     background-repeat: no-repeat;
