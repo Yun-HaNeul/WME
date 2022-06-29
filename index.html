@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WME x Lambgoat</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" media="(min-width: 600px) and (max-width: 1200px)" href="css/index_T.css">
 </head>
@@ -28,9 +29,18 @@
     <div class="nav">
         <nav>
             <ul class="nav_list">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">WME</a></li>
-                <li><a href="#">Product</a></li>
+                <li><a href="#">
+                    <span>Main</span>
+                </a></li>
+                <li><a href="#">
+                    <span>WME</span>
+                </a></li>
+                <li><a href="#">
+                    <span>WME on News</span>
+                </a></li>
+                <li><a href="#">
+                    <span>Product</span>
+                </a></li>
             </ul>
         </nav>
     </div>
@@ -197,8 +207,110 @@
         </section><!-- // sec2-->
         <section class="sec3">
             <div class="secInner">
+                <div class="news_tit">
+                    <h3 class="news_title"><img src="img/sec3_title.svg" alt="WME on NEWS"></h3>
+                    <p class="news_desc">WME에 새롭게 공개되는 정보들을 살펴보세요.</p>
+                </div>
+                <div class="news_cont">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" onclick="window.open('https://www.beefcentral.com/processing/goat-processing-to-expand-with-bourke-abattoir-to-open-later-this-year/')">
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img1"></div>
+                                    </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">Goat processing to expand with Bourke abattoir to open later this year</h5>
+                                        <a target="_blank" href="https://www.beefcentral.com/processing/goat-processing-to-expand-with-bourke-abattoir-to-open-later-this-year/" class="news_view">view</a>
+                                        <p class="date">2022-04-27</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" onclick="window.open('https://www.sheepcentral.com/processors-and-lotfeeders-look-into-grain-fed-goats/')">
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img2"></div>
+                                    </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">Processors and lotfeeders look into grain-fed goats</h5>
+                                        <a target="_blank" href="https://www.sheepcentral.com/processors-and-lotfeeders-look-into-grain-fed-goats/" class="news_view">view</a>
+                                        <p class="date">2022-02-21</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" onclick="window.open('https://www.sheepcentral.com/qld-goat-processor-to-finish-11m-expansion-mid-year/')">
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img3"></div>
+                                    </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">QLD small stock processor to finish $11m expansion mid-year</h5>
+                                        <a target="_blank" href="https://www.sheepcentral.com/qld-goat-processor-to-finish-11m-expansion-mid-year/" class="news_view">view</a>
+                                        <p class="date">2022-02-02</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" onclick="window.open('https://www.abc.net.au/news/2021-02-10/queensland-goat-industry-goes-gangbusters/13136348')">
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img4"></div>
+                                    </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">Australia's domestic goat market goes gangbusters in global pandemic with Queensland 'leading the way'</h5>
+                                        <a target="_blank" href="https://www.abc.net.au/news/2021-02-10/queensland-goat-industry-goes-gangbusters/13136348" class="news_view">view</a>
+                                        <p class="date">2021-02-10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" onclick="window.open('https://www.abc.net.au/news/rural/2017-03-28/queenslands-only-sheep-processor-opens-doors/8393598')">
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img5"></div>
+                                    </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">Goat processor Western Meat Exporters opens doors to mutton at Charleville meatworks</h5>
+                                        <a target="_blank" href="https://www.abc.net.au/news/rural/2017-03-28/queenslands-only-sheep-processor-opens-doors/8393598" class="news_view">view</a>
+                                        <p class="date">2017-03-28</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" onclick="window.open('https://www.abc.net.au/news/rural/2016-01-05/qld-goat-abattoir-fears-close-competitor-will-affect-jobs/7067702')"> 
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img6">
+                                    </div>
+                                </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">Queensland goat processor says jobs will go if government-backed Bourke abattoir is built</h5>
+                                        <a target="_blank" href="https://www.abc.net.au/news/rural/2016-01-05/qld-goat-abattoir-fears-close-competitor-will-affect-jobs/7067702" class="news_view">view</a>
+                                        <p class="date">2016-01-05</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" onclick="window.open('https://www.abc.net.au/news/rural/2014-08-21/goat-abattoir/5686162')">
+                                <div class="newsCard">
+                                    <div class="thum">
+                                        <div class="thum_img thum_img7"></div>
+                                    </div>
+                                    <div class="cont">
+                                        <h5 class="news_name">Australia's largest goat processor expands operations to meet growing worldwide demand for Aussie meat</h5>
+                                        <a target="_blank" href="https://www.abc.net.au/news/rural/2014-08-21/goat-abattoir/5686162" class="news_view">view</a>
+                                        <p class="date">2014-08-21</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- // sec3-->
+        <section class="sec4">
+            <div class="secInner">
                 <div class="pro_tit">
-                    <h3 class="pro_title"><img src="img/sec3_title.svg" alt="product"></h3>
+                    <h3 class="pro_title"><img src="img/sec4_title.svg" alt="product"></h3>
                     <p class="pro_desc">WME의 제품을 소개합니다.</p>
                 </div>
                 <div class="pro_cont">
@@ -217,7 +329,7 @@
                     </div>
                 </div>
             </div>
-        </section><!-- // sec3-->
+        </section><!-- // sec4-->
     </main>
     <footer>
         <div class="f_inner">
@@ -232,6 +344,7 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
     <script>

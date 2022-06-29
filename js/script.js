@@ -56,13 +56,27 @@ $(function(){
                 tg.addClass("active");
             }   
         })
-        if($sct >= 3214){
+        if($sct >= 4400){
             $(".header, .nav").addClass("active");
         }else {
             $(".header, .nav").removeClass("active");
         }
     })//scroll
-
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
     // topBtn
     const top = $(".f_topBtn");
 

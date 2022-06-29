@@ -30,7 +30,8 @@
 /* Common */
 :root {
     --main-txt: white;
-    --main-color: #0A2339;
+    --main-color: #2E3192;
+    --text-color: #0A2339;
     --sub-color: #EAF4F6;
 }
 html, body {
@@ -159,7 +160,7 @@ body::-webkit-scrollbar {
     position: fixed;
     bottom: 6rem;
     z-index: 9999;
-    width: 14rem;
+    width: 22rem;
 }
 .nav .nav_list {   
     display: flex;
@@ -169,13 +170,17 @@ body::-webkit-scrollbar {
 
 
 .nav .nav_list li a{
-    position: relative;
     color: var(--main-txt);
     font-size: 2rem;
-    padding: 1rem 2rem;
+
     transition: 0.35s;
 }
-.nav .nav_list li a::before {
+.nav .nav_list li a span {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 3rem;
+}
+.nav .nav_list li a span::before {
     content: '';
     position: absolute;
     left: 0;
@@ -183,21 +188,35 @@ body::-webkit-scrollbar {
     width: 0%;
     height: 100%;
     transition: 0.5s ease-in;
+    z-index: -1;
 }
 .nav .nav_list li a:hover {
     opacity: 0.5;
 }
-.nav .nav_list li.active a::before {
+.nav .nav_list li.active a span::before {
     width: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    background: #ffffff;
+}
+.nav .nav_list li.active.s3 a span::before {
+    background: var(--main-color);
 }
 /* active */
-.nav.active .nav_list li a {
+.nav .nav_list li.active a {
     color: var(--main-color);
+    font-weight: bold;
+    z-index: 5;
 }
-.nav.active .nav_list li.active a::before {
+.nav.active .nav_list li a {
+    color: var(--main-color)
+    
+}
+.nav.active .nav_list li.active a {
+    color: white;
+}
+.nav.active .nav_list li.active a span::before {
     width: 100%;
-    background: rgba(10, 35, 57, 0.3);
+    background: var(--main-color);
+
 }
 
 /* main */
@@ -289,7 +308,7 @@ body::-webkit-scrollbar {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 48, 91, 0.6);
+    background: rgba(46, 49, 146, 0.349);
     transition: 0.35s linear;
     opacity: 0;
     backdrop-filter: blur(0px);
@@ -398,7 +417,7 @@ body::-webkit-scrollbar {
 }
 .sec2 .secInner .intro_t ul .loop_txt {
     font: 25rem "RaleWay_R";
-    color: rgba(49, 73, 95, 0.8);
+    color: #6a6caf88;
 
 }
 .sec2 .secInner .intro_t .intro_t_tit {
@@ -449,7 +468,7 @@ body::-webkit-scrollbar {
     height: 21rem;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 8px 8px 10px #071827;
+    box-shadow: 8px 8px 10px #07182773;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -581,28 +600,164 @@ body::-webkit-scrollbar {
     animation-delay: 2.4s;
 }
 
-
 /* section3 */
 .sec3 {
+    height: 100vh;
+}
+.sec3 .secInner {
+    text-align: center;
+}
+.sec3 .secInner .news_tit {
+    margin-top: 9rem;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.sec3 .secInner .news_tit .news_desc {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+}
+.news_cont {
+    width: 100%;
+    margin: 0 auto;
+}
+.swiper {
+    width: 75vw;
+    height: 70vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: pointer;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: url("../img/icon/prev.svg")
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: url("../img/icon/next.svg")
+}
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    top: unset;
+    bottom: 4rem;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: var(--main-color);
+}
+.swiper-slide:hover .newsCard .thum {
+    opacity: 0.5;
+}
+.swiper-slide:hover .newsCard .cont .news_view {
+    color: brown;
+}
+.thum {
+    width: 20.3125vw;
+    min-width: 30rem;
+    height: 40rem;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+    transition: 0.35s;
+}
+.thum .thum_img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.thum .thum_img1 {
+    background-image: url("../img/bg/sec3_thum1.jpg");
+}
+.thum .thum_img2 {
+    background-image: url("../img/bg/sec3_thum2.jpg");
+}
+.thum .thum_img3 {
+    background-image: url("../img/bg/sec3_thum3.jpg");
+}
+.thum .thum_img4 {
+    background-image: url("../img/bg/sec3_thum4.png");
+}
+.thum .thum_img5 {
+    background-image: url("../img/bg/sec3_thum5.png");
+}
+.thum .thum_img6 {
+    background-image: url("../img/bg/sec3_thum6.png");
+}
+.thum .thum_img7 {
+    background-image: url("../img/bg/sec3_thum7.jpg");
+}
+.cont {
+    display: flex;
+    flex-direction: column;
+    
+}
+.cont .news_name {
+    width: 20vw;
+    min-width: 30rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #341C1C;
+    font-size: 1.7rem;
+}
+.cont .news_view {
+    align-self: flex-start;
+    color: #341C1C;
+    font-size: 1.7rem;
+    text-decoration: underline;
+    margin: 1rem 0 5.5rem;
+    transition: 0.35s;
+}
+.cont .date {
+    align-self: flex-start;
+    color: #8C8C8C;
+}
+/* active */
+.sec3.active .secInner .news_tit {
+    animation: fadeRol 1.5s ease-in forwards;
+}
+/* section4 */
+.sec4 {
     /* height: 100vh; */
     background: var(--sub-color);
     height: 100vh;
     overflow: hidden;
 }
-.sec3 .secInner {
+.sec4 .secInner {
     text-align: center;
 }
-.sec3 .secInner .pro_tit {
+.sec4 .secInner .pro_tit {
     margin-top: 9rem;
     opacity: 0;
     transform: translateY(100px);
 }
-.sec3 .secInner .pro_tit .pro_desc {
+.sec4 .secInner .pro_tit .pro_desc {
     font-size: 2.5rem;
-    color: var(--main-color);
+    color: var(--text-color);
     margin-top: 2rem;
 }
-.sec3 .secInner .pro_cont {
+.sec4 .secInner .pro_cont {
     position: relative;
     width: 75%;
     margin: 0 auto;
@@ -610,17 +765,17 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     margin-top: 8rem;
 }
-.sec3 .secInner .pro_cont::before {
+.sec4 .secInner .pro_cont::before {
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 49rem;
     height: 50rem;
-    background: url("../img/bg/sec3_bg.svg") no-repeat center / cover;
+    background: url("../img/bg/sec4_bg.svg") no-repeat center / cover;
 }
 /*
-.sec3 .secInner .pro_cont::after {
+.sec4 .secInner .pro_cont::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -628,9 +783,9 @@ body::-webkit-scrollbar {
     transform: translate(-50%, -50%);
     width: 1px;
     height: 44rem;
-    background: url("../img/sec3_line.png") no-repeat center / cover;
+    background: url("../img/sec4_line.png") no-repeat center / cover;
 } */
-.sec3 .secInner .pro_cont .catalogBox .catal_frt {
+.sec4 .secInner .pro_cont .catalogBox .catal_frt {
     position: relative;
     width: 34.6rem;
     height: 48.9rem;
@@ -642,10 +797,10 @@ body::-webkit-scrollbar {
     cursor: pointer;
     transition: 0.35s;
 }
-.sec3 .secInner .pro_cont .catalogBox .catal_frt:hover {
+.sec4 .secInner .pro_cont .catalogBox .catal_frt:hover {
     opacity: 0.8;
 }
-.sec3 .secInner .pro_cont .catalogBox .catal_frt::before {
+.sec4 .secInner .pro_cont .catalogBox .catal_frt::before {
     position: absolute;
     font: 10rem "Montserrat_B";
     writing-mode: vertical-lr;
@@ -654,47 +809,47 @@ body::-webkit-scrollbar {
     top: -30%;
     opacity: 0;
 }
-.sec3 .secInner .pro_cont .catalogBox .catalLamb_frt {
-    background-image: url("../img/bg/sec3_lamb.jpg");
+.sec4 .secInner .pro_cont .catalogBox .catalLamb_frt {
+    background-image: url("../img/bg/sec4_lamb.jpg");
 
 }
-.sec3 .secInner .pro_cont .catalogBox .catalLamb_frt::before {
+.sec4 .secInner .pro_cont .catalogBox .catalLamb_frt::before {
     content: "LAMB";
     left: -35%;
 }
-.sec3 .secInner .pro_cont .catalogBox .catalGoat_frt {
-    background-image: url("../img/bg/sec3_goat.jpg");
+.sec4 .secInner .pro_cont .catalogBox .catalGoat_frt {
+    background-image: url("../img/bg/sec4_goat.jpg");
 }
-.sec3 .secInner .pro_cont .catalogBox .catalGoat_frt::before {
+.sec4 .secInner .pro_cont .catalogBox .catalGoat_frt::before {
     content: "GOAT";
     right: -35%;
 }
-.sec3 .secInner .pro_cont .pro_new {
+.sec4 .secInner .pro_cont .pro_new {
     position: relative;
     width: 44.6rem;
     z-index: 55;
     transform: translateY(50px);
 }
-.sec3 .secInner .pro_cont .pro_new::before, .sec3 .secInner .pro_cont .pro_new::after {
+.sec4 .secInner .pro_cont .pro_new::before, .sec4 .secInner .pro_cont .pro_new::after {
     content: "";
     position: absolute;
     top: 35%;
     width: 1px;
     height: 44rem;
-    background: url("../img/sec3_line.png") no-repeat center / cover;
+    background: url("../img/sec4_line.png") no-repeat center / cover;
 }
-.sec3 .secInner .pro_cont .pro_new::before {
+.sec4 .secInner .pro_cont .pro_new::before {
     left: -3rem;
     transform: translate(-50%, -50%);
 }
-.sec3 .secInner .pro_cont .pro_new::after {
+.sec4 .secInner .pro_cont .pro_new::after {
     right: -3rem;
     transform: translate(-50%, -50%);
 }
-.sec3 .secInner .pro_cont .pro_new .proBox {
+.sec4 .secInner .pro_cont .pro_new .proBox {
     position: relative;
 }
-.sec3 .secInner .pro_cont .pro_new .proBox::before {
+.sec4 .secInner .pro_cont .pro_new .proBox::before {
     content: '';
     position: absolute;
     left: 0;
@@ -704,14 +859,14 @@ body::-webkit-scrollbar {
     background: var(--main-color);
     z-index: -1;
 }
-.sec3 .secInner .pro_cont .pro_new .proBox h4 {
+.sec4 .secInner .pro_cont .pro_new .proBox h4 {
     font: 5rem "Montserrat_B";
     color: #FAE100;
 }
-.sec3 .secInner .pro_cont .pro_new .proBox .box_ele {
+.sec4 .secInner .pro_cont .pro_new .proBox .box_ele {
     width: 100%;
     height: 36rem;
-    background: url("../img/sec3_box.png") no-repeat center / cover;
+    background: url("../img/sec4_box.png") no-repeat center / cover;
     transform: rotate(5deg);
     animation: shake 1s infinite both;
     cursor: pointer;
@@ -720,24 +875,24 @@ body::-webkit-scrollbar {
     50% {transform: rotate(-25deg);}
     100% {transform: rotate(5deg);}
 }
-.sec3 .secInner .pro_cont .pro_new .proBox span {
+.sec4 .secInner .pro_cont .pro_new .proBox span {
     font-size: 3rem;
     color: white;
 }
 /* active */
-.sec3.active .secInner .pro_tit {
+.sec4.active .secInner .pro_tit {
     animation: fadeRol 1.5s ease-in forwards;
 }
-.sec3.active .secInner .pro_cont .catalogBox .catal_frt::before {
+.sec4.active .secInner .pro_cont .catalogBox .catal_frt::before {
     animation: proName 1.5s 1s ease-in-out forwards;
 }
-.sec3.active .secInner .pro_cont .catalogBox .catalGoat_frt::before {
+.sec4.active .secInner .pro_cont .catalogBox .catalGoat_frt::before {
     animation-delay: 1.3s;
 }
-.sec3.active .secInner .pro_cont .pro_new {
+.sec4.active .secInner .pro_cont .pro_new {
     animation: rolling 1.5s linear forwards;
 }
-.sec3.active .secInner .pro_cont .catalogBox .catal_frt {
+.sec4.active .secInner .pro_cont .catalogBox .catal_frt {
     animation: rolling 1.5s linear forwards;
 }
 /* footer */
