@@ -359,7 +359,7 @@ input {
     transform: rotate(180deg) translate3d(0, 0, 1px);
     position: absolute;
     top: 25%;
-    left: 19%;
+    left: 27%;
     /* padding: 45%; */
     justify-content: flex-end;
     color: #1a1a1a;
@@ -368,7 +368,7 @@ input {
 }
 .package__direction svg {
     fill: currentColor;
-    width: 72%;
+    width: 59%;
     min-width: 2vmin;
 }
 .package__wrapper {
@@ -427,7 +427,7 @@ input {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 68%;
+  width: 65%;
   transform: translate(-50%, -50%) translate3d(calc(var(--x, 0) * 1%), calc((((1 - var(--packaged, 0)) * (var(--y, 0) * (max(var(--height), var(--depth), var(--width)))))) * -1vmin), calc(var(--z, 0) * 1vmin));
   opacity: var(--packaged);
 }

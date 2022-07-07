@@ -1030,7 +1030,7 @@ body::-webkit-scrollbar {
     opacity: 0;
 }
 .sec4 .secInner .pro_cont .catalogBox .catalLamb_frt {
-    background-image: url("../img/bg/sec4_lamb.jpg");
+    background-image: url("../img/bg/sec4_lamb.png");
 
 }
 .sec4 .secInner .pro_cont .catalogBox .catalLamb_frt::before {
@@ -1038,7 +1038,7 @@ body::-webkit-scrollbar {
     left: -35%;
 }
 .sec4 .secInner .pro_cont .catalogBox .catalGoat_frt {
-    background-image: url("../img/bg/sec4_goat.jpg");
+    background-image: url("../img/bg/sec4_goat.png");
 }
 .sec4 .secInner .pro_cont .catalogBox .catalGoat_frt::before {
     content: "GOAT";
