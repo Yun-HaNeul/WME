@@ -26,6 +26,14 @@
     font-family: "RaleWay_R";
     src: url(../assets/Raleway-Medium.ttf);
 }
+@font-face {
+    font-family: "nanum_R";
+    src: url(../assets/NanumGothic-Regular.ttf);
+}
+@font-face {
+    font-family: "nanum_B";
+    src: url(../assets/NanumGothic-Bold.ttf);
+}
 
 /* Common */
 :root {
@@ -33,17 +41,13 @@
     --main-color: #2E3192;
     --text-color: #0A2339;
     --sub-color: #EAF4F6;
+    --subtext-color: #373737;
 }
 html, body {
-    font-family: "Montserrat_R";
+    font-family: "nanum_R";
     font-size: 10px;
     word-break: keep-all;
     overflow-x: hidden;
-}
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -52,6 +56,11 @@ body::-webkit-scrollbar {
     max-width: 1680px;
     width: 100%;
     margin: 0 auto;
+}
+.cate {
+    font: 10rem "Montserrat_BB";
+    color: var(--main-color);
+    margin-bottom: 11rem;
 }
 /* .container {
 
@@ -68,8 +77,8 @@ body::-webkit-scrollbar {
     z-index: 999;
 }
 .header .logo a {
-    width: 20rem;
-    height: 12.5rem;
+    width:13rem;
+    height: 14rem;
     text-indent: -9999rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -232,6 +241,9 @@ body::-webkit-scrollbar {
     filter: grayscale(100%);
     z-index: 1;
     animation: bgColor 1.5s 10s linear forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sec1 .secInner .web .sloganWrap {
     position: relative;
@@ -401,26 +413,37 @@ body::-webkit-scrollbar {
 } */
 /* sec2 */
 .sec2 {
-    padding: 23rem 0;
-    background: var(--main-color);
+    /*background: var(--main-color);*/
     color: var(--main-txt);
 }
-.sec2 .secInner .intro_t ul {
+.art1 {
+    padding: 15rem 0;
+    background: var(--main-color);
+}
+.sec2 .intro_t {
+    width: 100%;
+    height: 100%;
+}
+.sec2 .intro_t .intro_t_loop {
+    position: relative;
+    top: 8rem;
+}
+.sec2 .intro_t ul {
     /* width: 200%; */
     display: flex;
     transform: translateX(20%);
     gap: 16rem;
 }
 
-.sec2 .secInner .intro_t ul > li {
+.sec2 .intro_t ul > li {
     flex: 0 0 auto;
 }
-.sec2 .secInner .intro_t ul .loop_txt {
+.sec2 .intro_t ul .loop_txt {
     font: 25rem "RaleWay_R";
     color: #6a6caf88;
 
 }
-.sec2 .secInner .intro_t .intro_t_tit {
+.sec2 .intro_t .intro_t_tit {
     position: relative;
     text-align: center;
     font-size: 3rem;
@@ -428,7 +451,7 @@ body::-webkit-scrollbar {
     margin-bottom: 3rem;
 
 }
-.sec2 .secInner .intro_t .intro_t_txt {
+.sec2 .intro_t .intro_t_txt {
     position: relative;
     width: 80%;
     margin: 0 auto;
@@ -437,6 +460,231 @@ body::-webkit-scrollbar {
     line-height: 2;
     
 }
+.art2 {
+    padding: 21rem 0;
+    border: 1px solid red;
+    
+    color: #373737;
+}
+.art2 .verti_img img {
+    width: 100%;
+    height: auto;
+}
+.art2 .verti_cont {
+    text-align: center;
+    margin-top: 25rem;
+    font-size: 3rem;
+    line-height: 2;
+}
+.add_zone {
+    margin-top: 21.7rem;
+}
+.add_zone ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+    align-items: center;
+}
+.add_zone ul li.add_card .add_img {
+    height: 84rem;
+    overflow: hidden;
+}
+.add_zone ul li.add_card:nth-child(2) {
+    transform: translateY(13rem);
+}
+.add_zone ul li.add_card:nth-child(3) {
+    transform: translateY(26rem);
+}
+.add_zone ul li.add_card .add_img .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+    transition: 0.35s;
+}
+.add_zone ul li.add_card .add_img .img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 23, 31, 0.6);
+    transition: 0.35s;
+}
+.add_zone ul li.add_card .add_img .img1 {
+    background-position: center;
+    background-image: url("../img/bg/sec2_thum1.jpg");
+}
+.add_zone ul li.add_card .add_img .img2 {
+    background-position: 80% 0;
+    
+    background-image: url("../img/bg/sec2_thum2.jpg");
+    transform: scale(1.35);
+}
+.add_zone ul li.add_card .add_img .img3 {
+    background-position: center;
+    background-image: url("../img/bg/sec2_thum3.png");
+}
+
+.add_zone ul li.add_card .add_cont h5 {
+    font: 3rem "nanum_B";
+    color: var(--main-color);
+    letter-spacing: 0.055em;
+    margin: 5.5rem 0 3rem;
+}
+.add_zone ul li.add_card .add_cont p {
+    color: var(--subtext-color);
+    font-size: 1.8rem;
+    letter-spacing: 0.055em;
+    line-height: 2.6rem;
+}
+.add_zone ul li.add_card:hover .add_img .img {
+    filter: grayscale(0);
+}
+.add_zone ul li.add_card:hover .add_img .img::before {
+    background: rgba(23, 23, 31, 0.0);
+}
+.austMeat {
+    margin-top: 50rem;
+}
+.austMeat .descrip {
+    margin-bottom: 13rem;
+    font-size: 3rem;
+}
+.austMeatZone ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16rem;
+    align-items: center;
+}
+.austMeatZone ul li.meatCard {
+    width: 39.5833vw;
+    min-width: 60rem;
+    height: 55.5rem;
+    margin-bottom: 10.5rem;
+    transition: 0.35s;
+}
+
+.austMeatZone ul li.meatCard .cardWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.meatCard .meat_img {
+    width: 100%;
+    height: 100%;
+    background-position: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.meatCard .meat_img1 {background-image: url("../img/bg/sec2_m1.jpg");}
+.meatCard .meat_img2 {background-image: url("../img/bg/sec2_m2.png");}
+.meatCard .meat_img3 {background-image: url("../img/bg/sec2_m3.jpg");}
+.meatCard .meat_img4 {background-image: url("../img/bg/sec2_m4.jpg");}
+.meatCard .meat_img5 {background-image: url("../img/bg/sec2_m5.jpg");}
+.meatCard .meat_cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    padding: 4rem;
+    color: white;
+}
+.meatCard1 .meat_cont {background-color: #25604A;}
+.meatCard2 .meat_cont {background-color: #705B3B;}
+.meatCard3 .meat_cont {background-color: #B99E76;}
+.meatCard4 .meat_cont {background-color: #1A1C65;}
+.meatCard5 .meat_cont {background-color: #0A2339;}
+
+.meat_cont > h5 {
+    font: 3rem "nanum_B";
+    
+}
+.meat_cont > p {
+    position: absolute;
+    width: 80%;
+    bottom: 4rem;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+/* .assoCut {
+    margin: 14.5rem 0 41rem;
+}  */
+.art3 {
+    width: 100%;
+    /* height: 100vh; */
+    padding: 21rem 0 10rem;
+    border: 1px solid red;
+    background: #ECECEC;
+}
+.assoCutZone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+}
+.assoCutZone p {
+    font-size: 2.2rem;
+    word-break: keep-all;
+    line-height: 2;
+    color: var(--subtext-color);
+    text-align: right;
+}
+
+.assoCutZone figure img {
+    width: 71rem;
+    height: auto;
+    filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.assoCutZone figure figcaption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.art4 {
+    width: 100%;
+    height: 68rem;
+    background: var(--main-color);
+}
+.art4 .secInner, .partner {
+    width: 100%;
+    height: 100%;
+}
+.partnerZone {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.partnerZone .partner_cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.partnerZone .partner_cont p {
+    margin-top: 10%;
+    position: relative;
+    font-size: 3rem;
+    line-height: 2;
+}
+.partnerZone .partner_cont p::before {
+    content: '';
+    position: absolute;
+    left: 3%;
+    top: -95%;
+    width: 95%;
+    height: 21.1rem;
+    background: url("../img/sec2_wme.svg") no-repeat center / contain;
+}
+
+
+
 .sec2 .secInner .intro_b .intro_b_tit {
     font: 3.5rem "Montserrat_BB";
     text-align: center;
@@ -542,33 +790,7 @@ body::-webkit-scrollbar {
     margin-right: 6rem;
     text-align: right;
 }
-.sec2 .secInner .boxArea {
-    margin: 14.5rem 0 41rem;
-} 
-.sec2 .secInner .boxArea .box_cont {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 7rem;
-}
-.sec2 .secInner .boxArea .box_cont p {
-    font-size: 2.2rem;
-    word-break: keep-all;
-    line-height: 2;
-}
 
-.sec2 .secInner .boxArea .box_cont figure img {
-    width: 71rem;
-    height: auto;
-    filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.sec2 .secInner .boxArea .box_cont figure figcaption {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
 .sec2 .secInner .wmeArea {
     text-align: center;
 }
@@ -587,7 +809,7 @@ body::-webkit-scrollbar {
     background: url("../img/sec2_wme.svg") no-repeat center / contain;
 }
 /* active */
-.sec2.active  .secInner .intro_t ul{
+.sec2.active  .intro_t ul{
     animation: wmeMarquee 45s linear infinite;
 }
 .sec2.active .secInner .intro_b .intro_b_cont .affi_imgBox .affi_lists {

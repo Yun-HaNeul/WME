@@ -1,49 +1,25 @@
 @charset "UTF-8";
 @import url(reset.css);
 
-/* Font */
-@font-face {
-    font-family: "Montserrat_R";
-    src: url(../assets/Montserrat-Regular.ttf);
-}
-@font-face {
-    font-family: "Montserrat_M";
-    src: url(../assets/Montserrat-Medium.ttf);
-}
-@font-face {
-    font-family: "Montserrat_SB";
-    src: url(../assets/Montserrat-SemiBold.ttf);
-}
-@font-face {
-    font-family: "Montserrat_B";
-    src: url(../assets/Montserrat-Bold.ttf);
-}
-@font-face {
-    font-family: "Montserrat_BB";
-    src: url(../assets/Montserrat-Black.ttf);
-}
-
 /* Common */
 :root {
     --main-txt: white;
-    --main-color: #0A2339;
+    --main-color: #2E3192;
+    --text-color: #0A2339;
     --sub-color: #EAF4F6;
+    --subtext-color: #373737;
 }
-html, body {
-    font-family: "Montserrat_R";
-    font-size: 10px;
-    overflow-x: hidden;
-    word-break: keep-all;
+.secInner {
+    padding: 0 9.6093vw;
 }
-
 /* header */
 .header {
     height: 12rem;
-    padding: 5rem;
+    padding: 12.3rem 5rem;
 }
 .header .logo a {
-    width: 27rem;
-    height: 8.5rem;
+    width: 9.6rem;
+    height: 10.3rem;
 }
 /* nav */
 .nav {
@@ -72,13 +48,13 @@ html, body {
     transform: translateX(-40%) translateY(100px) scale(.7);
 }
 .sec1 .mainBox .partnerBox .partner_txt img {
-    width: 85vw;
+    width: 65vw;
 }
 .sec1 .secInner .web {
     display: none;
 }
 .sec1 .secInner .tab {
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,15 +69,17 @@ html, body {
     position: absolute;
 }
 .sec1 .secInner .sloganWrap {
-    padding-left: 9vw;
     justify-content: flex-start;
 }
 .sec1 .secInner .sloganWrap .sloganBox {
     transform: translateY(300px);
-    animation: rolling 2s linear forwards;
+    animation: rolling 3s linear forwards;
+
+
+    
 }
 .sec1 .secInner .sloganWrap .sloganBox .slogan_F {
-    animation: smoke1 2s 3s linear forwards;
+    animation: smoke1 3s 4s linear forwards;
 }
 .sec1 .secInner .sloganWrap2, .sec1 .secInner .sloganWrap3, .sec1 .secInner .sloganWrap4 {
     display: none;
@@ -112,11 +90,11 @@ html, body {
 .sec1 .secInner .sloganWrap2 .slogan_WME {
     position: absolute;
     top: 30%;
-    animation: rolling2 1.75s 3s linear forwards;
+    animation: rolling2 2.5s 3.1s linear forwards;
 }
 .sec1 .secInner .sloganWrap .slogan {
     transform: translateY(300px);
-    animation: rolling 2.5s 3s linear forwards;
+    animation: rolling 2.5s 3.1s linear forwards;
 }
 .sec1 .secInner .sloganWrap4 .slogan {
     white-space: nowrap;
@@ -135,7 +113,7 @@ html, body {
     position: absolute;
     opacity: 0;
     transform: translateX(40%) translateY(0%) scale(.8);
-    animation: logoRoll 2s 8s linear forwards;
+    animation: logoRoll 2s 9s linear forwards;
 }
 .sec1 .secInner .tab .sloganWrap1:nth-of-type(1), .sec1 .secInner .tab .sloganWrap1:nth-of-type(3) {
     position: relative;
@@ -156,15 +134,15 @@ html, body {
     height: 15vw;
 }
 .sec1.active .secInner .tab .sloganWrap1:nth-of-type(1) {
-    animation: Wani 3s 1s linear forwards,
+    animation: Wani 3s 1.5s linear forwards,
     smoke2 2s 10s linear forwards;
 }
 .sec1.active .secInner .tab .sloganWrap1:nth-of-type(2) {
-    animation: Mani 3s 1s linear forwards,
+    animation: Mani 3s 1.5s linear forwards,
     smoke2 2s 10s linear forwards;
 }
 .sec1.active .secInner .tab .sloganWrap1:nth-of-type(3) {
-    animation: Eani 3s 1s linear forwards,
+    animation: Eani 3s 1.5s linear forwards,
     smoke2 2s 10s linear forwards;
 }
 .sec1.active .secInner .sloganWrap2, .sec1.active .secInner .sloganWrap3, .sec1.active .secInner .sloganWrap4 {
@@ -181,14 +159,77 @@ html, body {
     margin-top: 18vw;
 }
 .sec1.active .secInner .tab .sloganWrap1:nth-of-type(3)::before {
-    animation: rolling2 1s 4.5s linear forwards;
+    animation: rolling2 2s 5s linear forwards;
 }
 .sec1.active .secInner .tab .sloganWrap {
     animation: smoke2 2s 10s linear forwards;
 }
  /* sec2 */
-.sec2 .secInner .intro_t .intro_t_txt {
-    font-size: 2.5vw;
+.sec2 .intro_t .intro_t_txt {
+    font-size: 2vw;
+}
+.art1 {
+    height: 100vh;
+}
+.cate {
+    margin-bottom: 6rem;
+    font-size: 5.46875vw;
+}
+.art2 .verti_cont {
+    font-size: 1.4vw;
+    margin-top: 6.6406vw;
+}
+.add_zone {
+    margin-top: 6.6406vw;
+}
+.add_zone ul li.add_card .add_img {
+    height: 40.625vw;
+}
+.add_zone ul li.add_card .add_cont h5 {
+    font-size: 2rem;
+}
+.add_zone ul li.add_card .add_cont p {
+    width: 75%;
+    font-size: 1.3rem;
+    line-height: 146%;
+}
+.austMeat .descrip {
+    font-size: 2.5rem;
+    margin-bottom: 6rem;
+}
+.austMeatZone ul {
+    gap: 9%;
+}
+.austMeatZone ul li.meatCard {
+    width: 36.5625vw;
+    height: 32.8rem;
+    min-width: 30rem;
+}
+.meatCard .meat_cont {
+    padding: 4rem 2rem;
+}
+.meat_cont > h5 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.meat_cont > p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.art3 {
+    padding: 13vw 0 10vw;
+}
+.assoCutZone figure img {
+    width: 48rem;
+}
+.assoCutZone p {
+    font-size: 1.5rem;
+}
+.art4 {
+    padding: 8.2031vw 0;
+}
+.partnerZone .partner_cont p {
+    font-size: 3rem;
 }
 .sec2 .secInner .intro_b .intro_b_tit {
     font-size: 3.5vw;
@@ -248,7 +289,41 @@ html, body {
     height: 38rem; */
     top: -30%;
 }
-
+.sec3 .secInner .news_tit {
+    margin-bottom: 3.5rem;
+}
+.sec4 .secInner .pro_cont {
+    margin-top: 12rem;
+}
+.sec4 .secInner .pro_cont .catalogBox .catal_frt {
+    width: 20.6rem;
+    height: 29.9rem;
+}
+.sec4 .secInner .pro_cont .catalogBox .catal_frt::before {
+    font-size: 7rem;
+}
+.sec4 .secInner .pro_cont .pro_new {
+    width: 26.6rem;
+}
+.sec4 .secInner .pro_cont .pro_new::before, .sec4 .secInner .pro_cont .pro_new::after {
+    top: 49%;
+}
+.sec4 .secInner .pro_cont .pro_new .proBox::before {
+    left: 0px;
+    width: 100%;
+    height: 63.1rem;
+}
+.sec4 .secInner .pro_cont .pro_new .proBox h4 {
+    font-size: 3rem;
+}
+.sec4 .secInner .pro_cont .pro_new .proBox .box_ele {
+    width: 81%;
+    margin: 2rem auto 5rem;
+    height: 25rem;
+}
+.sec4 .secInner .pro_cont .pro_new .proBox span {
+    font-size: 2rem;
+}
 /* footer */
 
 /* animation */
