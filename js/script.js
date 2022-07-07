@@ -50,13 +50,14 @@ $(function(){
         console.log($sct);
         contents.each(function(i){
             let tg = $(this);
+            console.log(tg.offset().top-300);
             if(tg.offset().top - 300 < $sct){
                 menu.removeClass("active");
                 menu.eq(i).addClass("active");
                 tg.addClass("active");
             }   
         })
-        if($sct >= 4400){
+        if($sct >= 2100 || $sct >= 1600){
             $(".header, .nav").addClass("active");
         }else {
             $(".header, .nav").removeClass("active");
